@@ -1,6 +1,6 @@
--- 
+--
 --  Sea el siguiente conjunto de tablas en una base de datos:
--- 
+--
 --    tbl0
 --    ------------------------
 --    K0  CHAR(1)
@@ -8,7 +8,7 @@
 --    c02 INT
 --    c03 CHAR(4)
 --    c04 FLOAT
---        
+--
 --    tbl1
 --    ------------------------
 --    K0  CHAR(1)
@@ -28,8 +28,8 @@
 --    c24 FLOAT,
 --    c25 CHAR(5)
 --
---  Escriba una consulta que retorne todos los 
---  campos de los registros de la tabla tbl0 
+--  Escriba una consulta que retorne todos los
+--  campos de los registros de la tabla tbl0
 --  con la columna c02 mayor o igual a 300.
 --
 --  Rta/
@@ -42,3 +42,5 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT * FROM tbl0
+WHERE c02 >= 300

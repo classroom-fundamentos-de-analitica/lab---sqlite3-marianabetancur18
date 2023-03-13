@@ -1,6 +1,6 @@
--- 
+--
 --  Sea el siguiente conjunto de tablas en una base de datos:
--- 
+--
 --    tbl0
 --    ------------------------
 --    K0  CHAR(1)
@@ -8,7 +8,7 @@
 --    c02 INT
 --    c03 CHAR(4)
 --    c04 FLOAT
---        
+--
 --    tbl1
 --    ------------------------
 --    K0  CHAR(1)
@@ -28,9 +28,9 @@
 --    c24 FLOAT,
 --    c25 CHAR(5)
 --
---  Escriba una consulta que retorne todos los campos de 
---  la tabla tbl1 ordenada por fecha (c14) para los 
---  registros con K0 diferente a A y B y c13 diferente 
+--  Escriba una consulta que retorne todos los campos de
+--  la tabla tbl1 ordenada por fecha (c14) para los
+--  registros con K0 diferente a A y B y c13 diferente
 --  de 200 y 900
 --
 --  Rta/
@@ -40,6 +40,9 @@
 --  ...
 --  11  C  19  570.43  400  2019-04-12  0.48  FBEE
 --  12  C  24  482.32  300  2019-05-03  0.11  CCCE
--- 
+--
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT * FROM tbl1
+WHERE (K0 NOT IN ('A', 'B')) AND (c13 NOT IN (200, 900))
+ORDER BY c14
