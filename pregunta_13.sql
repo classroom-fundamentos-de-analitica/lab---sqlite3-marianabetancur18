@@ -1,6 +1,6 @@
--- 
+--
 --  Sea el siguiente conjunto de tablas en una base de datos:
--- 
+--
 --    tbl0
 --    ------------------------
 --    K0  CHAR(1)
@@ -8,7 +8,7 @@
 --    c02 INT
 --    c03 CHAR(4)
 --    c04 FLOAT
---        
+--
 --    tbl1
 --    ------------------------
 --    K0  CHAR(1)
@@ -40,6 +40,9 @@
 --  2  C  490.830000
 --  3  D  709.530000
 --  4  E  474.825000
--- 
+--
 --  >>> Escriba su codigo a partir de este punto <<<
---  
+--
+SELECT K0, avg(c12) FROM tbl1
+WHERE c13 > 400
+GROUP BY K0

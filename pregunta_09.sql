@@ -1,6 +1,6 @@
--- 
+--
 --  Sea el siguiente conjunto de tablas en una base de datos:
--- 
+--
 --    tbl0
 --    ------------------------
 --    K0  CHAR(1)
@@ -8,7 +8,7 @@
 --    c02 INT
 --    c03 CHAR(4)
 --    c04 FLOAT
---        
+--
 --    tbl1
 --    ------------------------
 --    K0  CHAR(1)
@@ -29,7 +29,7 @@
 --    c25 CHAR(5)
 --
 --  Escriba una consulta que retorne el registro
---  con el menor valor en la columna c21 de la 
+--  con el menor valor en la columna c21 de la
 --  tabla tbl2.
 --
 --  Rta/
@@ -38,3 +38,5 @@
 --
 --  >>> Escriba su codigo a partir de este punto <<<
 --
+SELECT * FROM tbl2
+WHERE c21 = (SELECT min(C21) FROM tbl2)

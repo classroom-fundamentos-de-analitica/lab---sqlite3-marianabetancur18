@@ -1,6 +1,6 @@
--- 
+--
 --  Sea el siguiente conjunto de tablas en una base de datos:
--- 
+--
 --    tbl0
 --    ------------------------
 --    K0  CHAR(1)
@@ -8,7 +8,7 @@
 --    c02 INT
 --    c03 CHAR(4)
 --    c04 FLOAT
---        
+--
 --    tbl1
 --    ------------------------
 --    K0  CHAR(1)
@@ -29,7 +29,7 @@
 --    c25 CHAR(5)
 --
 --  Escriba una consulta que retorne los campos K0 y c16
---  para los registros de la tabla tbl1 para los que la 
+--  para los registros de la tabla tbl1 para los que la
 --  columna c16 empieza por la misma letra de la columna K0.
 --
 --  Rta/
@@ -39,4 +39,7 @@
 --  2  C  CCCE
 --
 --  >>> Escriba su codigo a partir de este punto <<<
--- 
+--
+SELECT k0, c16 FROM tbl1
+WHERE c16
+LIKE (k0 ||'%');
